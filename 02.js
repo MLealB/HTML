@@ -12,7 +12,20 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+
+  let stringMasLargo = strings[0]; // Asignamos el primer string del arreglo como el más largo inicialmente
+
+  // Iteramos sobre el arreglo desde el segundo elemento
+  for (let i = 1; i < strings.length; i++) {
+    // Comparamos la longitud del string actual con el más largo actual
+    if (strings[i].length > stringMasLargo.length) {
+      stringMasLargo = strings[i]; // Si encontramos un string más largo, lo asignamos como el nuevo más largo
+    }
+  }
+
+  return stringMasLargo;
 }
+
 
 // No modifiques nada debajo de esta linea //
 
